@@ -131,6 +131,12 @@ grid-template-rows: 1fr; /*fraction responsiv wie height auto */
 
 main{
 	padding: min (30px, 7%);
+	
+	h1{
+		margin-top: 1em;
+		margin-bottom: 20px;
+		padding:5px 1em;
+	}
 }
 main p{
 	color: var(--secondary-text-clr);
@@ -223,10 +229,10 @@ main p{
 	/*margin: 0 auto;
 	display: flex;
 	justify-content: center;
-	align-items: center;
-}
+	align-items: center;*/
 
-/*img {
+
+img {
 	max-width: 100%;
 	height: auto;
 }
