@@ -151,6 +151,7 @@ img {
 }
 
 .container{
+	
 	border: 1px solid var(--line-clr);
 	border-radius: 1em;
 	margin-bottom: 20px;
@@ -179,13 +180,27 @@ img {
 }
 
 .zurück{
+	position:fixed; 
+	height: 20px;
+	width: 20px;
 	padding: 30px;
-	border: 1px solid var(--line-clr)
+
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--second-backgrnd-clr);
+	border: 1px solid var(--line-clr);
+	border-radius: 1em;
 
 }
 .zurück  :hover{
 	background-color: var(--hover-clr);
 }
+.footer{
+	color: var(--secondary-text-clr);
+}
+
+
 
 @media(max-width:800px){
 	body{
