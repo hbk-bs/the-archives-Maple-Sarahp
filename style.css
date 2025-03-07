@@ -1,9 +1,11 @@
 :root{
 	--base-clr: #11121a;
+	--black: #07081f;
 	--line-clr: #42434a;
 	--hover-clr: #222533;
 	--text-clr: #e6e6ef;
 	--accent-clr: #5e63ff;
+	--accent-scnd-clr: #ffec1e; 
 	--second-backgrnd-clr: #2e318dca;
 	--secondary-text-clr: #b0b3c1;
 }
@@ -18,7 +20,7 @@ html{
 body {
 	min-height: 100dvh;
 	min-width: 100dvw;
-	background-color: var(--base-clr);
+	background-color: var(--second-backgrnd-clr);
 	color: var(--text-clr);
     display: grid;
 	grid-template-columns: auto 1fr;
@@ -135,8 +137,12 @@ main{
 		margin-bottom: 20px;
 		padding:5px 1em;
 	}
+	h1{
+		color: var(--base-clr);
+		
+	}
 	h2{
-		color: var(--accent-clr)
+		color: var(--accent-scnd-clr)
 	}
 }
 main p{
@@ -171,12 +177,13 @@ img {
 }
 .flex img{
 	width: 300px;
-	padding-bottom: 50px;
+	padding-top: 50px;
 }
 .flex p{
 	padding-bottom: 25px;
 	font-size: 15pt;
-	
+	text-align: start;
+	color: var(--text-clr);
 }
 
 .zurück{
@@ -199,7 +206,7 @@ img {
 .footer{
 	color: var(--secondary-text-clr);
 	text-align: center;
-	
+
 }
 
 
