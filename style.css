@@ -151,7 +151,7 @@ img {
 }
 
 .container{
-	
+
 	border: 1px solid var(--line-clr);
 	border-radius: 1em;
 	margin-bottom: 20px;
@@ -198,6 +198,8 @@ img {
 }
 .footer{
 	color: var(--secondary-text-clr);
+	text-align: center;
+	
 }
 
 
