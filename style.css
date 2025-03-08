@@ -163,8 +163,16 @@ img {
 	border-radius: 1em;
 	margin-bottom: 20px;
 	padding: min(3em, 15%);
+	
 
 	h2, p { margin-top: 1em }
+	a{
+		text-decoration: none;
+	}
+	a:hover{
+	color: var(--accent-scnd-clr);
+	text-decoration: underline;
+    }
 }
 .flex{
 	border: 1px solid var(--accent-clr);
@@ -175,6 +183,13 @@ img {
     display: flex;
 	flex-direction: column;
 	flex-flow: column wrap; /*hallo was macht das*/
+	p{
+		max-width: 300px;
+		padding:1em;
+		
+	}
+	max-width: fit-content;
+	align-items: center;
 }
 .flex img{
 	width: 300px;
@@ -192,6 +207,7 @@ img {
 	text-decoration: underline;
 
 }
+
 
 .zurück{
 	position:fixed; 
@@ -213,7 +229,6 @@ img {
 .footer{
 	color: var(--secondary-text-clr);
 	text-align: center;
-
 }
 
 

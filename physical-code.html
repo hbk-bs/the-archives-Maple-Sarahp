@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
-        <title>{ algorythm }</title>
+        <title>{ Blinkenlichten }</title>
         <link rel="stylesheet" href="style.css" />
 		<script type="text/javascript" src="index.js" defer></script>
     </head>
@@ -53,43 +53,64 @@
             </ul>
            </nav>
         <main>
+            <header>
+              <h1>"Bau'n Haus"</h1>
+              <h2>Code der LEDs</h2>
+              <a class = "zurück" href="physical.html">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
+              </a>
+            </header>
+            
             <div class="container">
-                 <h1>Analogue Algorythm</h1>
-              <p> gun to my head? pull the trigger. pull the fucking trigger. </p>
-             
-                <div class="flex">
-                    <p> 1 ) Zeichne zwei sich gegenüberstehende Quadrate. Sie befinden sich auf mehreren ungleichen Linien,
-                     welche das Innere der Formen nicht überschreiten.</p>
-                      <img src="assets/images/algorythmus2.jpg" alt="Algorythmus2"> 
-                      <img src="assets/images/algorythmus3.jpg" alt="Algorythmus3"> 
-                </div> 
-                <div class="flex">
-                    <p>2 ) Mittig im Bild stehen sich parallel zwei Quadrate gegenüber.
-                        Sie befinden sich auf einem Untergrund aus vertikalen, ungeraden Linien.
-                    </p>
-                   <img src="assets/images/algorythmus1.jpg" alt="Algorythmus1">
-                </div>
-                <div class="flex">
-                    <p>3 ) Auf einem Hintergrund aus ungeraden, horizontalen, schwarzen Linien,
-                        liegen zwei rote Quadrate.
-                    </p>
-                    <img src="assets/images/algorythmus5.jpg" alt="Algorythmus5"> 
-                    <img src="assets/images/algorythmus4.jpg" alt="Algorythmus4"> 
-                    <img src="assets/images/algorythmus6.jpg" alt="Algorythmus6"> 
-                </div>
-                <div class="flex">
-                    <p>4 ) Auf einem ausgefüllten Hintergrund aus horizontal, welligen,
-                         sich nicht überkreuzenden schwarzen Linien, liegen zwei rot 
-                         ausgefüllte Quadrate sich parallel gegenüber. </p>
-                  <img src="assets/images/algorythmus7.jpg" alt="Algorythmus7"> 
-
-                </div>
+              <pre>#include 
+                #define LED_PIN 3
+                #define NUM_LEDS 30
+                #define BRIGHTNESS 255
+                #define LED_TYPE WS2811
+                #define COLOR_ORDER RGB
+                CRGB leds[NUM_LEDS];
+                int pirPin = 2;
+                int pirState = LOW;
+                int val = 0;
+                void setup() {
+                  pinMode(pirPin, INPUT);
+                  Serial.begin(9600);
+                  FastLED.addLeds(leds, NUM_LEDS);
+                  FastLED.setBrightness(BRIGHTNESS);
+                }
+                void loop() {
+                  val = digitalRead(pirPin);
+                  if (val == HIGH) {
+                    if (pirState == LOW) {
+                      Serial.println("Bewegung erkannt!");
+                      for(int i = 0; i < NUM_LEDS; i++){
+                    if(i % 3 == 2){
+                      leds[i] = CRGB(0,0,255);
+                    }else{
+                      leds[i] = CRGB(255,0,0);
+                    }
+                    FastLED.show();
+                    delay(700);
+                  }
+                      pirState = HIGH;
+                    }
+                  } else {
+                   if (pirState == HIGH) {
+                      Serial.println("Keine Bewegung.");
+                      delay(2500);
+                      fill_solid(leds, NUM_LEDS, CRGB::Black);
+                      FastLED.show();
+                      pirState = LOW;
+                    }
+                  }
+                }</pre> 
             </div>
             <footer>
-                <div class="footer">
-                  <p>Dokumentation - WiSe 24/25 - Sarah Lutterloh</p> 
-               </div>
-              </footer>
+         <div class="footer">
+           <p>Dokumentation - WiSe 24/25 - Sarah Lutterloh</p> 
+        </div>
+       </footer>
         </main>
+         
     </body>
 </html>
