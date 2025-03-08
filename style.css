@@ -25,6 +25,7 @@ body {
     display: grid;
 	grid-template-columns: auto 1fr;
 }
+
 #sidebar{
 	box-sizing: border-box;
 	height: 100vh;
@@ -158,7 +159,7 @@ img {
 
 .container{
 
-	border: 1px solid var(--line-clr);
+	border: 1px solid var(--base-clr);
 	border-radius: 1em;
 	margin-bottom: 20px;
 	padding: min(3em, 15%);
@@ -177,13 +178,19 @@ img {
 }
 .flex img{
 	width: 300px;
-	padding-top: 50px;
+	padding-bottom: 50px;
 }
-.flex p{
-	padding-bottom: 25px;
+.flex a{
 	font-size: 15pt;
 	text-align: start;
+	padding-bottom: 10px;
 	color: var(--text-clr);
+	text-decoration: none;
+}
+.flex a:hover {
+	color: var(--accent-scnd-clr);
+	text-decoration: underline;
+
 }
 
 .zurück{
