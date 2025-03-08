@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+        <title> spread the plague </title>
+
+<style>
+    *{
+  box-sizing: boder-box;
+  padding: 0;
+  margin: 0;
+}
+h1{
+  margin:50px;
+  font-size:3.5em;
+}
+h2{
+  margin:50px;
+  font-size:1.7em;
+}
+h1, h2, h3{
+text-align:center;
+}
+button{
+  padding: 10px 30px;
+  cursor: pointer;
+}
+timer{
+}
+
+html, body{
+  background: #f9e79f;
+  height: 100%;
+  height:100vw;
+  width:100vw;
+  margin:0 auto;
+  justify-content: center;
+  align-items: center;
+}
+canvas{
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='48' height='58' viewport='0 0 100 100' style='fill:black;font-size:29px;'><text y='50%'>🐀</text></svg>") 16 0,auto; /* maus als cusor */ 
+}
+</style>
+
+    </head>
+<header>
+    <h1>  Spread the Plague!</h1>
+   <h2>Beiße jeden Käsekrümel an bevor es zu spät ist!</h2>
+   <style> /*hätte auch in js und css*/
+     
+     canvas { /*käseteller*/
+       border: 5px solid #f2ba38;
+       background:#f2ba38;
+       display: block;
+       margin: 20px auto;
+     }
+     #popup {
+       display: none;
+       position: fixed;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       background: white;
+       padding: 20px;
+       border: 2px solid black;
+       text-align: center;
+     }
+     
+     #popup img { /*bildchen für popup*/
+       width: 150px; /* bildgröße anpassen */
+       height: auto;
+       margin-top: 20px;
+     }
+   </style>
+ </header>
+ <body>
+   <canvas id="gameCanvas" width="500" height="500"></canvas>
+   <div id="popup">
+     <p>Willst du mehr Käse?</p>
+     <img id="popupImage" src="" alt="">
+     <button onclick="generateCheese()">JA BITTE!</button>
+   </div>
+ 
+   <script>
+     const canvas = document.getElementById('gameCanvas');
+     const ctx = canvas.getContext('2d');
+     const popup = document.getElementById('popup');
+     const popupImage =             document.getElementById('popupImage');
+     let cheeseCount = 5;
+     let timer;
+     let timeLeft = 5; //sekunden
+     let cheesePositions = []; // array für käsekrümel position - speichert position
+ 
+     // käse zeichnen -- ctx für canvas!!weil zu blöd für p5js
+     function drawCheese(x, y) {
+       ctx.fillStyle = '#ffd663';
+       ctx.beginPath();
+       ctx.arc(x, y, 20, 0, Math.PI * 2);
+       ctx.fill();
+       cheesePositions.push({ x, y }); //position speichern bitte funktionier
+     }
+     
+     function startTimer() {
+         timeLeft = 8; // zeit in sek
+         const timerElement = document.createElement('div');
+         timerElement.id = 'timer';
+         timerElement.style.position = 'absolute'; //nach oben schieben 
+         timerElement.style.top = '10px';
+         timerElement.style.right = '10px';
+         timerElement.style.backgroundColor = '#ffc72b';
+         timerElement.style.border = '2px solid black';
+         timerElement.style.padding = '15px 30px';
+  
+         document.body.appendChild(timerElement);
+ 
+         timer = setInterval(() => {
+             timeLeft--;
+             timerElement.textContent = `Zeit:${timeLeft}s`;
+             if (timeLeft <= 0) {
+                 clearInterval(timer);
+                 if (cheeseCount > 0) {
+                     endGame(false); // verhungert
+                 }
+                 document.body.removeChild(timerElement); // timer weg wenn spiel zuende
+             }
+         }, 1000); // 1000millisekunden sonst zu schnell
+     }
+ 
+     // käsestücke machen hö
+     function generateCheese() {
+       ctx.clearRect(0, 0, canvas.width, canvas.height); // vorher canvas leeren
+       cheeseCount = (7); // käseanzahl 
+       cheesePositions = []; // positionsArray zurückssetzen
+       for (let i = 0; i < cheeseCount; i++) {
+         const x = Math.random() * canvas.width;
+         const y = Math.random() * canvas.height;//mathe macht mich krank-wortwörtlich
+         drawCheese(x, y); //drawcheese funktion
+       }
+       popup.style.display = 'none'; // popup schließen
+       startTimer(); // timer
+     }
+ 
+     
+     // Käse mampfen - rechteckig-aber object wird eh aus array gelöscht
+     canvas.addEventListener('click', (event) => {
+       const rect = canvas.getBoundingClientRect();
+       const mouseX = event.clientX - rect.left;
+       const mouseY = event.clientY - rect.top;
+ 
+       // is klick auf käse?
+       for (let i = 0; i < cheesePositions.length; i++)//.length gibt länge von string wieder
+       { 
+         const cheese = cheesePositions[i];
+         const distance = Math.sqrt(Math.pow(mouseX - cheese.x, 2) + Math.pow(mouseY - cheese.y, 2)); //sqrt=quadatwurzel braucht man für pow
+         if (distance <= 20) { // klick im radius
+           ctx.clearRect(cheese.x - 20, cheese.y - 20, 40, 40); // käse entfernen
+           cheesePositions.splice(i, 1); // käse aus dem array löschen
+           cheeseCount--;
+           if (cheeseCount === 0) {
+             endGame(true); // käse weg=gewonnen
+           }
+           break; // schleife schließen 
+         }
+       }
+     });//bitte funktionier ich sterbe sonst
+ 
+     // spü beenden
+     function endGame(won) {
+       clearInterval(timer);
+       popup.style.display = 'block';
+       popup.querySelector('p').textContent = won
+         ? "Jeder Käse wurde angebissen! Mehr Käse?"
+         : "Zeit abgelaufen! Du bist verhungert! Neuer Versuch?";
+ 
+       if (won) { //IN DER FUNKTION!!!!
+         popupImage.src = "https://i.pinimg.com/736x/c4/3a/5b/c43a5b2295d3b95753230a76aeedcf13.jpg"; // mausi happy
+       } else {
+         popupImage.src = "https://i.pinimg.com/736x/de/f1/a3/def1a341afcb1a2818168e6a69b8d53b.jpg"; // mausi traurig
+       }
+     }
+     
+     // spüi starten
+     generateCheese();
+   </script>
+   <h3></h3>
+ </body>
+ </html>
