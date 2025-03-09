@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p5.js Starter Project</title>
+    <style>
+    html,
+    body {
+        height: 100%;
+        background-color:#2e318dca ;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    main {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    a{
+        color: black;
+        text-decoration: none;
+    }
+    a:hover{
+        color: #ffec1e;
+        text-decoration: underline;
+    }
+    .zurück{
+      padding:15px;
+      border-radius: 1em ;
+    }
+    .zurück:hover{
+        background-color: #222533;
+    }
+
+    </style>
+
+</head>
+<body>
+
+
+    
+<main>
+    <header><a class = "zurück" href="http://127.0.0.1:3000/the-archives-Maple-Sarahp/motion.html">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
+      </a></header>
+    <div id="sketch"></div>
+    <a href="motion-apart.js">source code</a>
+    </main>
+    <script src="../the-archives-Maple-Sarahp/modules/p5/lib/p5.min.js"></script>
+    <!-- <script src="./modules/p5/lib/addons/p5.sound.min.js"></script> -->
+   <!-- <script src="./modules/@ff6347/p5-easing/dist/p5.easing.min.js"></script> -->
+
+    <script src="motion-apart.js"></script>
+</body>
+</html>
