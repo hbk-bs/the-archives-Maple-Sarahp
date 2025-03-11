@@ -135,23 +135,26 @@ grid-template-rows: 1fr; /*fraction responsiv wie height auto */
 main{
 	padding: min (30px, 7%);
 	
-	h1, h2{
-		margin-top: 1em;
-		margin-bottom: 20px;
-		padding:5px 1em;
-		
-	}
+	
 	h1{
-		color: var(--base-clr);
+		color: var(--accent-scnd-clr);
 		font-size: 50px;
+		margin-top: 1em;
+		margin-bottom: 40px;
+		
 	}
 	h2{
 		color: var(--accent-scnd-clr);
 		font-size: 30px;
+		text-align: center;
+		margin-bottom: 30px;
+		
 	}
+	    
+
 }
 main p{
-	color: var(--base-clr);
+	color: var(--secondary-text-clr);
 	margin-top: 5px;
 	margin-bottom: 15px;
 }
@@ -162,7 +165,6 @@ img {
 }
 
 .container{
-    background-color: var(--container-backgrnd);
 	border: 1px solid var(--base-clr);
 	border-radius: 1em;
 	margin-bottom: 20px;
@@ -170,8 +172,9 @@ img {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-
-	h2, p { 
+    background-color: var(--container-backgrnd);
+	
+	p { 
 		margin-top: 1em;
 	    max-width: 400px;
 	}
@@ -272,7 +275,6 @@ img {
 	
 }
 .footer{
-	color: var(--secondary-text-clr);
 	text-align: center;
 }
 
