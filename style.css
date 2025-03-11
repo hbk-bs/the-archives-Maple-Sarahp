@@ -90,7 +90,6 @@ body {
 	background-color: var(--hover-clr);
 }
 #sidebar .sub-menu{
-	/*einklappen von submenu mit grid*/
 	display: grid;
 	grid-template-rows: 0fr; /*hat keine größe*/
 	transition: 300ms ease-in-out;
@@ -103,7 +102,7 @@ body {
 grid-template-rows: 1fr; /*fraction responsiv wie height auto */
 }
 .dropdown-btn svg{
-	transition: 200ms ease; /*animiert drehung vom pfeil*/
+	transition: 200ms ease;
 }
 .rotate svg:last-child{
 	rotate: -180deg;
@@ -188,6 +187,7 @@ img {
     }
 	img{
 		max-width: 500px;
+		height:auto;
 	}
 }
 .reflex-text{
@@ -226,24 +226,27 @@ img {
 	background-color: var(--second-backgrnd-clr);
     display: flex;
 	flex-direction: column;
-	flex-flow: column; /*hallo was macht das*/
+	flex-flow: column; 
 	align-items: center;
 
 	p{
-		max-width: 500px;
-		padding:1.5em;
-		
+	 max-width: 500px;
+	 padding:1.5em;
 	}
-	
-	max-width: 600px;
+	 img{
+     width: 100%;
+	 max-width: 100%;
+	 height: auto;
+
+	 padding: 1.5em;
+    }
+	video{
+	 max-width: 500px;
+	 padding: 1.5em;
+    }
 }
-.flex img{
-	width: 400px;
-	padding-bottom: 50px;
-}
-.flex video{
-	width: 400px;
-}
+
+
 .flex a{
 	font-size: 15pt;
 	text-align: start;
@@ -299,6 +302,10 @@ img {
 		border: none;
 		padding:0;
 		
+	}
+	#reflex-text{
+		border: none;
+		padding:0;
 	}
 	#flex{
 		width: 100%;
