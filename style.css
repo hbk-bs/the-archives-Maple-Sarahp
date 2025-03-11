@@ -166,7 +166,9 @@ img {
 	border-radius: 1em;
 	margin-bottom: 20px;
 	padding: min(3em, 15%);
-	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 
 	h2, p { 
 		margin-top: 1em;
@@ -179,6 +181,9 @@ img {
 	color: var(--accent-scnd-clr);
 	text-decoration: underline;
     }
+	img{
+		max-width: 500px;
+	}
 }
 .reflex-text{
 	border: 1px solid var(--accent-clr);
@@ -257,7 +262,9 @@ img {
 	text-align: center;
 }
 
+#käsespiel{
 
+}
 
 @media(max-width:800px){
 	body{
