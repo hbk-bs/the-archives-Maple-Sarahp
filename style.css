@@ -192,11 +192,11 @@ img {
 }
 .reflex-text{
 	border: 1px solid var(--accent-clr);
-	border-radius: 1em;
-	margin-bottom: 20px;
+	border-radius: 10em;
+	margin-bottom: 30px;
 	padding: min(3em, 15%);
 	background-color: var(--third-text-backgrnd);
-	max-width: fit-content;
+	max-width: fit-600px;
 	padding-left: 2em;
 	padding-right: 2em;
 
