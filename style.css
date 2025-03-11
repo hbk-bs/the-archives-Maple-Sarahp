@@ -138,9 +138,10 @@ main{
 	
 	h1{
 		color: var(--accent-scnd-clr);
-		font-size: 50px;
+		font-size: 70px;
 		margin-top: 1em;
 		margin-bottom: 40px;
+
 		
 	}
 	h2{
@@ -234,7 +235,7 @@ img {
 		
 	}
 	
-	max-width: fit-content;
+	max-width: 600px;
 }
 .flex img{
 	width: 400px;
