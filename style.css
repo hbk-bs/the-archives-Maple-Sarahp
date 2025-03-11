@@ -192,6 +192,14 @@ img {
 	padding: min(3em, 15%);
 	background-color: var(--third-text-backgrnd);
 	max-width: fit-content;
+	padding-left: 2em;
+	padding-right: 2em;
+
+	display: flex;
+	flex-direction: column;
+	flex-flow: column wrap; /*hallo was macht das*/
+	align-items: center;
+
 	p{
 		color: var(--text-clr);
 		max-width: 500px;
@@ -199,6 +207,7 @@ img {
 	}
 	a{
 		color: var(--secondary-text-clr);
+		padding-top: 2em;
 	}
 	
 
@@ -213,6 +222,8 @@ img {
     display: flex;
 	flex-direction: column;
 	flex-flow: column wrap; /*hallo was macht das*/
+	align-items: center;
+
 	p{
 		max-width: 500px;
 		padding:1.5em;
@@ -220,7 +231,6 @@ img {
 	}
 	
 	max-width: fit-content;
-	align-items: center;
 }
 .flex img{
 	width: 400px;
