@@ -186,6 +186,8 @@ img {
 	margin-bottom: 20px;
 	padding: min(3em, 15%);
 	background-color: var(--third-text-backgrnd);
+	max-width: fit-content;
+	
 
 }
 .flex{
