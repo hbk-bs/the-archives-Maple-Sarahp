@@ -1,34 +1,86 @@
+:root {
+    --base-clr: #11121a;
+    --black: #07081f;
+    --line-clr: #42434a;
+    --hover-clr: #222533;
+    --text-clr: #e6e6ef;
+    --accent-clr: #5e63ff;
+    --accent-scnd-clr: #ffec1e;
+    --second-backgrnd-clr: #242bb4b2;
+    --secondary-text-clr: #b0b3c1;
+    --third-text-backgrnd: #4044b197;
+    --prime-backgrnd: #8e91e4;
+}
 
-    html,
-    body {
-        height: 100%;
-        background-color:#2e318dca ;
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--prime-backgrnd);
+}
+
+main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    border: 1px solid var(--accent-clr);
+    border-radius: 1em;
+    margin-bottom: 20px;
+    padding: min(3em, 15%);
+
+    background-color: var(--third-text-backgrnd);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    p {
+        margin-top: 1em;
+        max-width: 400px;
     }
 
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    main {
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    a{
-        color: black;
+    a {
         text-decoration: none;
     }
-    a:hover{
-        color: #ffec1e;
+
+    a:hover {
+        color: var(--accent-scnd-clr);
         text-decoration: underline;
     }
-    .zurück{
-      padding:15px;
-      border-radius: 1em ;
+
+    img {
+        max-width: 500px;
+        height: auto;
     }
-    .zurück:hover{
-        background-color: #222533;
-    }
+}
+
+a {
+    color: var(--base-clr);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent-scnd-clr);
+    text-decoration: underline;
+}
+
+.zurück {
+    padding: 15px;
+    border-radius: 1em;
+}
+
+.zurück:hover {
+    background-color: var(--hover-clr);
+
+}
