@@ -187,20 +187,19 @@ main p {
 	margin-bottom: 15px;
 }
 
-img {
-	max-width: 100%;
-	height: auto;
-}
 
 .container {
 	border: 1px solid var(--base-clr);
 	border-radius: 1em;
 	margin-bottom: 20px;
 	padding: min(3em, 15%);
+
+	background-color: var(--container-backgrnd);
+
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-color: var(--container-backgrnd);
+
 
 	p {
 		margin-top: 1em;
@@ -227,10 +226,11 @@ img {
 	border-radius: 2em;
 	margin-bottom: 30px;
 	padding: min(3em, 15%);
+
 	background-color: var(--third-text-backgrnd);
 	max-width: 600px;
-	padding-left: 2em;
-	padding-right: 2em;
+
+
 
 	display: flex;
 	flex-direction: column;
@@ -255,8 +255,8 @@ img {
 	border: 1px solid var(--accent-clr);
 	border-radius: 1em;
 	margin-bottom: 20px;
-
 	padding: min(3em, 15%);
+
 	background-color: var(--second-backgrnd-clr);
 	display: flex;
 	flex-direction: column;
@@ -270,8 +270,8 @@ img {
 
 	img {
 		max-width: 500px;
+		height: auto;
 		padding: 1.5em;
-		box-shadow: 4px #11121a;
 	}
 
 	video {
@@ -331,24 +331,23 @@ img {
 	}
 
 	img {
-		width: 100%;
+		width: 70%;
 		height: auto;
-
 	}
 
 	#container {
 		border: none;
 		padding: 0;
-
 	}
 
 	#reflex-text {
 		border: none;
 		padding: 0;
+		width: 70%;
 	}
 
 	#flex {
-		width: 100%;
+		width: 70%;
 		flex-direction: row;
 	}
 
