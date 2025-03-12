@@ -224,11 +224,11 @@ img {
 
 .reflex-text {
 	border: 1px solid var(--accent-clr);
-	border-radius: 10em;
+	border-radius: 2em;
 	margin-bottom: 30px;
 	padding: min(3em, 15%);
 	background-color: var(--third-text-backgrnd);
-	max-width: fit-600px;
+	max-width: 600px;
 	padding-left: 2em;
 	padding-right: 2em;
 
@@ -271,6 +271,7 @@ img {
 	img {
 		max-width: 500px;
 		padding: 1.5em;
+		box-shadow: 4px #11121a;
 	}
 
 	video {
@@ -318,7 +319,7 @@ img {
 	text-align: center;
 }
 
-#käsespiel {}
+
 
 @media(max-width:800px) {
 	body {
