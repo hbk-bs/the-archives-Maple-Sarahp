@@ -227,6 +227,7 @@ main p {
 	border: 1px solid var(--accent-clr);
 	border-radius: 2em;
 	margin-bottom: 30px;
+	margin-top: 20px;
 	padding: min(3em, 15%);
 
 	background-color: var(--third-text-backgrnd);
@@ -281,7 +282,9 @@ main p {
 		margin-top: 10px;
 		margin-bottom: 10px;
 	}
-
+   video{
+	max-width:400px;
+   }
 }
 
 
@@ -312,7 +315,7 @@ main p {
 	align-items: center;
 	justify-content: center;
 	background-color: var(--second-backgrnd-clr);
-	border: 1px solid var(--line-clr);
+	border: 1px solid var(--accent-clr);
 	border-radius: 5em;
 
 	position: absolute;
