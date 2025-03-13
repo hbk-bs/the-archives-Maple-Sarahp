@@ -254,10 +254,12 @@ main p {
 .flex {
 	border: 1px solid var(--accent-clr);
 	border-radius: 1em;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	padding: min(3em, 15%);
 
 	background-color: var(--second-backgrnd-clr);
+	max-width: 600px;
+
 	display: flex;
 	flex-direction: column;
 	flex-flow: column;
@@ -282,9 +284,9 @@ main p {
 
 
 .flex a {
+	display: flex;
+	align-items: center;
 	font-size: 15pt;
-	text-align: start;
-	padding-bottom: 10px;
 	color: var(--text-clr);
 	text-decoration: none;
 }
@@ -292,7 +294,8 @@ main p {
 .flex a:hover {
 	color: var(--accent-scnd-clr);
 	text-decoration: underline;
-	img{
+
+	img {
 		transform: scale(1.04);
 
 	}
