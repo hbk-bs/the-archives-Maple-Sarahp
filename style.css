@@ -344,6 +344,7 @@ main p {
 	}
 
 	#reflex-text {
+
 		border: none;
 		padding: 0;
 		width: 70%;
@@ -352,10 +353,12 @@ main p {
 	#flex {
 		width: 70%;
 		flex-direction: row;
+		justify-content: center;
+
 	}
 
 	#flex img {
-		float: left;
+		height: auto;
 	}
 
 	#sidebar {
