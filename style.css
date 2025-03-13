@@ -292,6 +292,10 @@ main p {
 .flex a:hover {
 	color: var(--accent-scnd-clr);
 	text-decoration: underline;
+	img{
+		transform: scale(1.04);
+
+	}
 
 }
 
