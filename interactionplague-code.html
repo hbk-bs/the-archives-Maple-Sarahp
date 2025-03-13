@@ -1,73 +1,98 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/mini-me" href="../the-archives-Maple-Sarahp/assets/images/mini-me.jpg" />
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/mini-me" href="../the-archives-Maple-Sarahp/assets/images/mini-me.jpg" />
 
 
-        <title> interaction </title>
-        <link rel="stylesheet" href="style.css" />
-		<script type="text/javascript" src="index.js" defer></script>
-    </head>
-    <body>
-        <nav id="sidebar">
-            <ul>
-              <li>
-                  <span class="logo">Maple Sarahp's Archive</span>
-              </li>
-              <li class="active"> 
-                  <a href="index.html">
-                      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
-                      <span>Home</span>
-                  </a>
-              </li>
-              <li>
-                  <a href="reflexion.html">
-                      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M520-600v-240h320v240H520ZM120-440v-400h320v400H120Zm400 320v-400h320v400H520Zm-400 0v-240h320v240H120Zm80-400h160v-240H200v240Zm400 320h160v-240H600v240Zm0-480h160v-80H600v80ZM200-200h160v-80H200v80Zm160-320Zm240-160Zm0 240ZM360-280Z"/></svg>
-                      <span>Semester Reflection</span>
-                  </a>
-              </li>
-              <li>
-                  <button onclick=toggleSubMenu(this) class="dropdown-btn">
-                      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-200q-33 0-56.5-23.5T40-280v-400q0-33 23.5-56.5T120-760h400q33 0 56.5 23.5T600-680v400q0 33-23.5 56.5T520-200H120Zm600-320q-17 0-28.5-11.5T680-560v-160q0-17 11.5-28.5T720-760h160q17 0 28.5 11.5T920-720v160q0 17-11.5 28.5T880-520H720Zm40-80h80v-80h-80v80ZM120-280h400v-400H120v400Zm40-80h320L375-500l-75 100-55-73-85 113Zm560 160q-17 0-28.5-11.5T680-240v-160q0-17 11.5-28.5T720-440h160q17 0 28.5 11.5T920-400v160q0 17-11.5 28.5T880-200H720Zm40-80h80v-80h-80v80Zm-640 0v-400 400Zm640-320v-80 80Zm0 320v-80 80Z"/></svg>
-                      <span>Projects</span>
-                      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
-                  </button>
-                  <ul class="sub-menu">
-                     <div>
-                      <li><a href="AnalogueAlgorythm.html">Analogue Algorythm</a></li>
-                      <li><a href="perspective.html">Perspective</a></li>
-                      <li><a href="interaction.html">Interaction</a></li>
-                      <li><a href="motion.html">Motion</a></li>
-                     </div>
-                  </ul>
-              </li>
-              <li>
-                  <a href="physical.html">
-                      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M756-120 537-339l84-84 219 219-84 84Zm-552 0-84-84 276-276-68-68-28 28-51-51v82l-28 28-121-121 28-28h82l-50-50 142-142q20-20 43-29t47-9q24 0 47 9t43 29l-92 92 50 50-28 28 68 68 90-90q-4-11-6.5-23t-2.5-24q0-59 40.5-99.5T701-841q15 0 28.5 3t27.5 9l-99 99 72 72 99-99q7 14 9.5 27.5T841-701q0 59-40.5 99.5T701-561q-12 0-24-2t-23-7L204-120Z"/></svg>
-                      <span>Physical Computing</span>
-                  </a>
-              </li>
-              
-      
-            </ul>
-           </nav>
+    <title> Spread The Plague-Code </title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="index.js" defer></script>
+</head>
 
-<main>
-    <div class="container"><header><a class = "zurück" href="interaction.html">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
-          </a></header>
+<body>
+    <nav id="sidebar">
+        <ul>
+            <li>
+                <span class="logo">Maple Sarahp's Archive</span>
+            </li>
+            <li class="active">
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e8eaed">
+                        <path
+                            d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
+                    </svg>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="reflexion.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e8eaed">
+                        <path
+                            d="M520-600v-240h320v240H520ZM120-440v-400h320v400H120Zm400 320v-400h320v400H520Zm-400 0v-240h320v240H120Zm80-400h160v-240H200v240Zm400 320h160v-240H600v240Zm0-480h160v-80H600v80ZM200-200h160v-80H200v80Zm160-320Zm240-160Zm0 240ZM360-280Z" />
+                    </svg>
+                    <span>Semester Reflection</span>
+                </a>
+            </li>
+            <li>
+                <button onclick=toggleSubMenu(this) class="dropdown-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e8eaed">
+                        <path
+                            d="M120-200q-33 0-56.5-23.5T40-280v-400q0-33 23.5-56.5T120-760h400q33 0 56.5 23.5T600-680v400q0 33-23.5 56.5T520-200H120Zm600-320q-17 0-28.5-11.5T680-560v-160q0-17 11.5-28.5T720-760h160q17 0 28.5 11.5T920-720v160q0 17-11.5 28.5T880-520H720Zm40-80h80v-80h-80v80ZM120-280h400v-400H120v400Zm40-80h320L375-500l-75 100-55-73-85 113Zm560 160q-17 0-28.5-11.5T680-240v-160q0-17 11.5-28.5T720-440h160q17 0 28.5 11.5T920-400v160q0 17-11.5 28.5T880-200H720Zm40-80h80v-80h-80v80Zm-640 0v-400 400Zm640-320v-80 80Zm0 320v-80 80Z" />
+                    </svg>
+                    <span>Projects</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e8eaed">
+                        <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+                    </svg>
+                </button>
+                <ul class="sub-menu">
+                    <div>
+                        <li><a href="AnalogueAlgorythm.html">Analogue Algorythm</a></li>
+                        <li><a href="perspective.html">Perspective</a></li>
+                        <li><a href="interaction.html">Interaction</a></li>
+                        <li><a href="motion.html">Motion</a></li>
+                    </div>
+                </ul>
+            </li>
+            <li>
+                <a href="physical.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e8eaed">
+                        <path
+                            d="M756-120 537-339l84-84 219 219-84 84Zm-552 0-84-84 276-276-68-68-28 28-51-51v82l-28 28-121-121 28-28h82l-50-50 142-142q20-20 43-29t47-9q24 0 47 9t43 29l-92 92 50 50-28 28 68 68 90-90q-4-11-6.5-23t-2.5-24q0-59 40.5-99.5T701-841q15 0 28.5 3t27.5 9l-99 99 72 72 99-99q7 14 9.5 27.5T841-701q0 59-40.5 99.5T701-561q-12 0-24-2t-23-7L204-120Z" />
+                    </svg>
+                    <span>Physical Computing</span>
+                </a>
+            </li>
 
-         <h1>"Spread the Plague"</h1>
-         <h2>html Code</h2>
-    
-         
-         
 
-      <div class="flex">
+        </ul>
+    </nav>
 
-<pre>
+    <main>
+        <div class="container">
+            <header><a class="zurück" href="interaction.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e8eaed">
+                        <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
+                    </svg>
+                </a></header>
+
+            <h1>"Spread the Plague"</h1>
+            <h2>html Code</h2>
+
+
+
+
+            <div class="flex">
+
+                <pre>
     &html lang="en"&
     &head&
         &meta charset="UTF-8" /&
@@ -247,13 +272,13 @@
 &/html&
 
 </pre>
+            </div>
 
-      </div>
-     <footer>
-        <div class="footer">
-          <p>DigiKom - WiSe 24/25 - Sarah Lutterloh</p> 
-       </div>
-      </footer>
-</main>
-       
-    </body>
+            <footer>
+                <div class="footer">
+                    <p>DigiKom - WiSe 24/25 - Sarah Lutterloh</p>
+                </div>
+            </footer>
+    </main>
+
+</body>

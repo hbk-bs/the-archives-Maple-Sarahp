@@ -42,7 +42,6 @@ body {
 	position: sticky;
 	top: 0;
 	align-self: start;
-	transition: 300ms ease-in-out;
 	overflow: hidden;
 	text-wrap: nowrap;
 }
@@ -155,7 +154,10 @@ body {
 }
 
 
-
+header {
+	position: relative;
+	padding-bottom: 40px;
+}
 
 main {
 	padding: min (30px, 7%);
@@ -203,7 +205,7 @@ main p {
 
 	p {
 		margin-top: 1em;
-		max-width: 400px;
+		max-width: 500px;
 	}
 
 	a {
@@ -255,7 +257,7 @@ main p {
 	border: 1px solid var(--accent-clr);
 	border-radius: 1em;
 	margin-bottom: 10px;
-	padding: min(3em, 15%);
+	padding: min(2em, 15%);
 
 	background-color: var(--second-backgrnd-clr);
 	max-width: 600px;
@@ -270,17 +272,22 @@ main p {
 		padding: 1.5em;
 	}
 
-	img,
-	video {
+	img, video {
 		max-width: 500px;
 		height: auto;
-		padding: 1.5em;
+		flex-wrap: wrap;
+		border-radius: 1em;
+		margin-top: 10px;
+		margin-bottom: 10px;
 	}
+
 }
 
 
 .flex a {
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 	align-items: center;
 	font-size: 15pt;
 	color: var(--text-clr);
@@ -300,22 +307,24 @@ main p {
 
 
 .zurück {
-	height: 20px;
-	width: 20px;
-	padding: 20px;
+	height: 50px;
+	width: 50px;
 
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	background-color: var(--second-backgrnd-clr);
 	border: 1px solid var(--line-clr);
-	border-radius: 1em;
+	border-radius: 5em;
+
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
 
 }
 
 .zurück :hover {
-	background-color: var(--hover-clr);
-
+	transform: scale(1.2);
 }
 
 .footer {
