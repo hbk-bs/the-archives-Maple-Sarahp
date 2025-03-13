@@ -270,14 +270,10 @@ main p {
 		padding: 1.5em;
 	}
 
-	img {
-		max-width: 500px;
-		height: auto;
-		padding: 1.5em;
-	}
-
+	img,
 	video {
 		max-width: 500px;
+		height: auto;
 		padding: 1.5em;
 	}
 }
