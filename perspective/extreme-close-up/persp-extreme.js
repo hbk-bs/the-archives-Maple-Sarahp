@@ -1,5 +1,6 @@
 function setup() {
-	createCanvas(400, 400);
+	const canvas = createCanvas(500, 500);
+	canvas.parent("sketch");
 	background("darkslategray");
 
 	const x = (n) => width * n;

@@ -1,5 +1,6 @@
 function setup() {
-	createCanvas(610, 610);
+	const canvas = createCanvas(610, 610);
+	canvas.parent("sketch");
 	background("lightblue");
 
 	stroke("darkblue");

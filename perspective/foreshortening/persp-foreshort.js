@@ -1,5 +1,6 @@
 function setup() {
-	createCanvas(600, 600);
+	const canvas = createCanvas(500, 500);
+	canvas.parent("sketch");
 	background("coral");
 	angleMode(DEGREES);
 
