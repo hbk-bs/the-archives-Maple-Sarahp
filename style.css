@@ -262,11 +262,21 @@ main {
 	flex-direction: column;
 	flex-flow: column;
 	align-items: center;
+	
+	#mini-me{
+		border-radius: 10em;
+		width: 30%;
+	}
 
 	p {
 		color: var(--text-clr);
 		max-width: 500px;
 		padding: 1.5em;
+	}
+	pre{
+		white-space: pre-wrap;
+		word-wrap: break-word;
+		text-align: justify;
 	}
 
 	img,
@@ -285,10 +295,7 @@ main {
 	}
 	
 }
-#mini-me{
-		border-radius: 10em;
-		width: 30%;
-	}
+
 
 .flex a {
 	display: flex;
