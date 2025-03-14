@@ -197,6 +197,7 @@ main {
 	align-items: center;
 
 
+
 	p {
 		margin-top: 1em;
 		max-width: 500px;
@@ -219,7 +220,7 @@ main {
 
 .reflex-text {
 	border: 1px solid var(--accent-clr);
-	border-radius: 2em;
+	border-radius: 1em;
 	margin-bottom: 30px;
 	margin-top: 20px;
 	padding: min(3em, 15%);
