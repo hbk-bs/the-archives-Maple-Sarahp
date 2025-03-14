@@ -227,7 +227,7 @@ main {
 	background-color: var(--third-text-backgrnd);
 	max-width: 600px;
 
-
+	
 
 	display: flex;
 	flex-direction: column;
@@ -252,7 +252,7 @@ main {
 	border: 1px solid var(--accent-clr);
 	border-radius: 1em;
 	margin-bottom: 10px;
-	padding: min(2em, 15%);
+	padding: min(3em, 15%);
 
 	background-color: var(--second-backgrnd-clr);
 	max-width: 600px;
@@ -278,9 +278,10 @@ main {
 		margin-bottom: 50px;
 		padding: 1.5em;
 	}
-   video{
-	max-width:400px;
-   }
+
+	video {
+		max-width: 400px;
+	}
 }
 
 
@@ -326,7 +327,8 @@ main {
 
 .footer {
 	text-align: center;
-	p{
+
+	p {
 		color: var(--secondary-text-clr);
 	}
 }
@@ -355,7 +357,7 @@ main {
 	#reflex-text {
 		border: none;
 		padding: 0;
-		
+
 	}
 
 	#flex {
