@@ -274,7 +274,7 @@ main {
 		max-width: 500px;
 		height: auto;
 		flex-wrap: wrap;
-		border-radius: 1em;
+		border-radius: 2em;
 		margin-top: 10px;
 		margin-bottom: 50px;
 		padding: 1.5em;
@@ -282,6 +282,10 @@ main {
 
 	video {
 		max-width: 400px;
+	}
+	#mini-me{
+		border-radius: 10em;
+		width: 30%;
 	}
 }
 
