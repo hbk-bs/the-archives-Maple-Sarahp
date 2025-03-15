@@ -356,7 +356,7 @@ main {
 		padding: 2em 1em 60px 1em;
 	}
 
-	img {
+	img, video {
 		width: 70%;
 		height: auto;
 	}
@@ -374,6 +374,7 @@ main {
 
 	#flex {
 		flex-direction: row;
+		flex-wrap: wrap;
 		justify-content: center;
 
 	}
@@ -401,10 +402,6 @@ main {
 			overflow-x: scroll;
 		}
 
-		ul li {
-			height: 100%;
-		}
-
 		ul a,
 		ul .dropdown-btn {
 			width: 60px;
@@ -416,7 +413,6 @@ main {
 
 		ul li span,
 		ul li:first-child
-
 		/*logo und button*/
 		,
 		.dropdown-btn svg:last-child {
